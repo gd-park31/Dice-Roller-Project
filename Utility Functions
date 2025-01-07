@@ -1,0 +1,15 @@
+public class Utility {
+    // Method to calculate the average of valid dice rolls
+    public static double calculateAverage(ArrayList<Integer> numbers) {
+        if (numbers.size() == 0) {
+            return 0; // Prevent division by zero
+        }
+
+        int sum = 0;
+        for (int num : numbers) {
+            sum += num;
+        }
+        
+        return (double) sum / numbers.size();
+    }
+}
