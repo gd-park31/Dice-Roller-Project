@@ -14,3 +14,7 @@ calculates the average, and displays statistics.
 1. Compile the project: `javac DiceRoller.java DiceProcessor.java Utility.java`
 2. Run the program: `java DiceRoller`
 
+## Example Run
+Enter a number (0 to stop): 5 Enter a number (0 to stop): 14 Enter a number (0 to stop): 8 Enter a number (0 to stop): -3 Enter a number (0 to stop): 0
+
+--- Results --- Valid inputs: [5, 8] Invalid inputs: [14, -3] Number of valid inputs: 2 Number of invalid inputs: 2 Average of valid inputs: 6.5
