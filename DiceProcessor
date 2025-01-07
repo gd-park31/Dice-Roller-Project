@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+
+public class DiceProcessor {
+    private ArrayList<Integer> validNumbers = new ArrayList<>();
+    private String invalidNumbers = ""; // Store invalid values
+    private int validCount = 0, invalidCount = 0;
+
+    // Method to collect dice roll inputs
+    public void collectDiceRolls(Scanner scanner) {
+        int userInput;
+
+        do {
+            System.out.print("Enter a number (0 to stop): ");
+            userInput = scanner.nextInt();
+
+            if (userInput >= 2 && userInput <= 12) {
+                validNumbers.add(userInput);
+                validCount++;
+            } else if (userInput != 0) {
+                invalidNumbers += userInput + " ";
+                invalidCount++;
+            }
+        } while (userInput != 0);
+    }
+
+    // Method to calculate the average
+    private double calculateAverage() {
+        if (validCount == 0) return 0; // Prevent division by zero
+        return Utility.calculateAverage(validNumbers);
+    }
+
+    // Method to display results
+    public void displayResults() {
+        System.out.println("Valid inputs: " + validNumbers);
+        System.out.println("Invalid inputs: " + (invalidNumbers.isEmpty() ? "None" : invalidNumbers.trim()));
+        System.out.println("Number of valid inputs: " + validCount);
+        System.out.println("Number of invalid inputs: " + invalidCount);
+        System.out.println("Average of valid inputs: " + calculateAverage());
+    }
+}
