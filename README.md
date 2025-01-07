@@ -10,10 +10,6 @@ calculates the average, and displays statistics.
 - Implements ternary operators and error handling.
 - Uses Java Collections (`ArrayList`) for dynamic input storage.
 
-## How to Run
-1. Compile the project: `javac DiceRoller.java DiceProcessor.java Utility.java`
-2. Run the program: `java DiceRoller`
-
 ## Example Run
 Enter a number (0 to stop): 5 Enter a number (0 to stop): 14 Enter a number (0 to stop): 8 Enter a number (0 to stop): -3 Enter a number (0 to stop): 0
 
